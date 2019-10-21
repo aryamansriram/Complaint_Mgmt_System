@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="csstransforms csstransforms3d csstransitions"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<title>Feedback_Written</title>
+	<link rel="icon" href="/static/favicon.png" type="image/png">
+	<link href="/static/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+	<link href="/static/linecons.css" rel="stylesheet" type="text/css">
+	<link href="/static/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="/static/responsive.css" rel="stylesheet" type="text/css">
+	<link href="/static/animate.css" rel="stylesheet" type="text/css">
+
+	<link href="/static/css_002.css" rel="stylesheet" type="text/css">
+	<link href="/static/css.css" rel="stylesheet" type="text/css">
+
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/jquery_002.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/bootstrap.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/jquery-scrolltofixed.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/jquery_003.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/jquery.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/wow.js"></script>
+	<script type="text/javascript" src="Project_Homepage_files/classie.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('.res-nav_click').click(function() {
+				$('ul.toggle').slideToggle(600)
+			});
+
+			$(document).ready(function() {
+				$(window).bind('scroll', function() {
+					if ($(window).scrollTop() > 0) {
+						$('#header_outer').addClass('fixed');
+					} else {
+						$('#header_outer').removeClass('fixed');
+					}
+				});
+
+			});
+
+
+		});
+
+		function resizeText() {
+			var preferredWidth = 767;
+			var displayWidth = window.innerWidth;
+			var percentage = displayWidth / preferredWidth;
+			var fontsizetitle = 25;
+			var newFontSizeTitle = Math.floor(fontsizetitle * percentage);
+			$(".divclass").css("font-size", newFontSizeTitle)
+		}
+	</script>
+</head>
+
+<body background="/static/login_bg.png">
+
+	<!--Header_section-->
+	<header id="header_outer" style="z-index: 1000; position: fixed; top: 0px; margin-left: 0px; width: 1291px; left: 0px;" class="scroll-to-fixed-fixed">
+		<div class="container">
+			<div class="header_section">
+				<div class="logo"><a href="javascript:void(0)"><img src="/static/logob.png" alt=""></a></div>
+				<nav class="nav" id="nav">
+					<ul class="toggle">
+						<li><a href="#top_content">Home</a></li>
+						<li><a href="#service">Services</a></li>
+						<li><a href="#work_outer">Work</a></li>
+						<li><a href="#Portfolio">Portfolio</a></li>
+						<li><a href="#client_outer">Clients</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="login.html">Login</a></li>
+					</ul>
+					<ul class="">
+						<li><a href="/home">Home</a></li>
+						
+						<li><a href="/">Login</a></li>
+					</ul>
+				</nav>
+				<a class="res-nav_click animated wobble wow animated" href="javascript:void(0)" style="visibility: visible; animation-name: wobble;"><i class="fa-bars"></i></a> </div>
+		</div>
+    </header><div style="display: block; width: 1291px; height: 92px; float: none;"></div>
+    
+   
+    <div id="data_coll-sig">
+        <h1 style="font-family: Dossis;"><center>Sign Up</center></h1>
+        <form id="dt-sig" action="/signup_validate" method="POST">
+            <div class="row-sig">
+            <label class="sig"> Name: </label>
+            <input type="text" name="Name" placeholder="Enter name"/> 
+            </div>
+            <div class="row-sig">
+                <label class="sig"> Email Id: </label>
+                <input type="email" name="mail" placeholder="Enter email"/> 
+            </div>
+            <div class="row-sig">
+            <label class="sig"> Age: </label>
+            <input type="text" name = "age" placeholder="Enter age"/> 
+            </div>
+
+            <div class="row-sig">
+                <label class="sig"> Address </label>
+                <textarea name="add"></textarea>    
+            </div>
+
+            <div class="row-sig">
+            <label class="sig"> Username </label>
+            <input type="text" name="uname" placeholder="Enter username"/> 
+            </div>
+            <div class="row-sig">
+                <label class="sig"> Password: </label>
+            <input type="password" name="pwd"/> 
+            </div>
+
+            
+            <div class="row-rat">
+                    <label class="sig"> Confirm Password: </label>
+                    <input type="password" name="cpwd" /> 
+
+            
+            </div>
+            <input type="submit" id="data_sub" value="SUBMIT"/> 
+            </div>
+                
+                
+                     
+        
+           
+            
+                    
+
+
+
+               
+        </form>
+    </div>
+       
+
+
+
+
+    
+}
+
+
+</script>
+
+
+
+</body></html>

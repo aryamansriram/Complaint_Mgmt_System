@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="csstransforms csstransforms3d csstransitions"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<title>Feedback_Written</title>
+	<link rel="icon" href="/static/favicon.png" type="image/png">
+	<link href="/static/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="/static/style.css" rel="stylesheet" type="text/css">
+	<link href="/static/linecons.css" rel="stylesheet" type="text/css">
+	<link href="/static/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="/static/responsive.css" rel="stylesheet" type="text/css">
+	<link href="/static/animate.css" rel="stylesheet" type="text/css">
+
+	<link href="/static/css_002.css" rel="stylesheet" type="text/css">
+	<link href="/static/css.css" rel="stylesheet" type="text/css">
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/jquery_002.js"></script>
+	<script type="text/javascript" src="/static/bootstrap.js"></script>
+	<script type="text/javascript" src="/static/jquery-scrolltofixed.js"></script>
+	<script type="text/javascript" src="/static/jquery_003.js"></script>
+	<script type="text/javascript" src="/static/jquery.js"></script>
+	<script type="text/javascript" src="/static/wow.js"></script>
+	<script type="text/javascript" src="/static/classie.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('.res-nav_click').click(function() {
+				$('ul.toggle').slideToggle(600)
+			});
+
+			$(document).ready(function() {
+				$(window).bind('scroll', function() {
+					if ($(window).scrollTop() > 0) {
+						$('#header_outer').addClass('fixed');
+					} else {
+						$('#header_outer').removeClass('fixed');
+					}
+				});
+
+			});
+
+
+		});
+
+		function resizeText() {
+			var preferredWidth = 767;
+			var displayWidth = window.innerWidth;
+			var percentage = displayWidth / preferredWidth;
+			var fontsizetitle = 25;
+			var newFontSizeTitle = Math.floor(fontsizetitle * percentage);
+			$(".divclass").css("font-size", newFontSizeTitle)
+		}
+	</script>
+</head>
+
+<body background="/static/login_bg.png">
+
+	<!--Header_section-->
+	<header id="header_outer" style="z-index: 1000; position: fixed; top: 0px; margin-left: 0px; width: 1291px; left: 0px;" class="scroll-to-fixed-fixed">
+		<div class="container">
+			<div class="header_section">
+				<div class="logo"><a href="javascript:void(0)"><img src="/static/logob.png" alt=""></a></div>
+				<nav class="nav" id="nav">
+					<ul class="toggle">
+						<li><a href="#top_content">Home</a></li>
+						<li><a href="#service">Services</a></li>
+						<li><a href="#work_outer">Work</a></li>
+						<li><a href="#Portfolio">Portfolio</a></li>
+						<li><a href="#client_outer">Clients</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="login.html">Login</a></li>
+					</ul>
+					<ul class="">
+						<li><a href="/twit">Viz</a></li>
+						<li><a href="/data">Questions</a></li>
+						<li><a href="#work_outer">Dashboard</a></li>
+						
+						
+						<li><a href="/home">Signout</a></li>
+					</ul>
+				</nav>
+				<a class="res-nav_click animated wobble wow animated" href="javascript:void(0)" style="visibility: visible; animation-name: wobble;"><i class="fa-bars"></i></a> </div>
+		</div>
+    </header><div style="display: block; width: 1291px; height: 92px; float: none;"></div>
+    
+   
+    <div id="data_coll" class="flipInY wow animated animated">
+        
+        <form id="dt" action="/ratings_validate" method="POST">
+            <div class="row-rat">
+            <label> Rate your locality on the basis of greenery found</label><br>
+            0 <input type="range" name="green" class="range" max="5" min="1" step=1> 5
+              
+
+            </div>
+            <div class="row-rat">
+                <label>Rate your locality on the basis of amount of pollution found.</label><br>
+                0 <input type="range" name="pollution" class="range" max="5" min="1" step=1> 5
+            </div>
+            <div class="row-rat">
+                <label>Rate your locality on the basis of cleanliness and sanitation.</label><br>
+                0 <input type="range" name="clean" class="range" max="5" min="1" step=1> 5
+            </div>
+            <div class="row-rat">
+                <label>Is your locality ever blocked by traffic jams?</label><br>
+                <input type="radio" name="traffic_yes"/>Yes
+                <input type="radio" name="traffic_no"/>No
+            </div>
+            <div class="row-rat">
+                <label>Do you feel your locality is safe?</label><br>
+                <input type="radio" name="safe_yes"/>Yes
+                <input type="radio" name="safe_no"/>No
+            </div>
+                
+                
+                     
+        
+            
+            
+            <input type="submit" id="data_sub" value="SUBMIT"/>           
+
+
+
+               
+        </form>
+    </div>
+       
+	
+
+
+    
+
+
+</body></html>
