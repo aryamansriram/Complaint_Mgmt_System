@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html class="csstransforms csstransforms3d csstransitions"><head>
+	<style>
+		#iframe{
+			margin-left: 140px;
+			margin-top: 20px;
+			font-weight: 600;
+			font-family: 'Dosis';
+			color: black;
+		}
+		.tweets{
+			max-height: 550px; 
+  		max-width:320px; 
+			float:right;
+
+			overflow:auto;
+		}
+		.wrap{
+			max-height: 550px;
+		}
+		
+	
+	
+	</style>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1">
@@ -15,12 +37,7 @@
 	<link href="/static/css_002.css" rel="stylesheet" type="text/css">
 	<link href="/static/css.css" rel="stylesheet" type="text/css">
 
-	<!-- =======================================================
-    Theme Name: Butterfly
-    Theme URL: https://bootstrapmade.com/butterfly-free-bootstrap-theme/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-	======================================================= -->
+
 
 	<script type="text/javascript" src="Project_Homepage_files/jquery_002.js"></script>
 	<script type="text/javascript" src="Project_Homepage_files/bootstrap.js"></script>
@@ -29,7 +46,7 @@
 	<script type="text/javascript" src="Project_Homepage_files/jquery.js"></script>
 	<script type="text/javascript" src="Project_Homepage_files/wow.js"></script>
 	<script type="text/javascript" src="Project_Homepage_files/classie.js"></script>
-
+	
 	<script type="text/javascript">
 		$(document).ready(function(e) {
 			$('.res-nav_click').click(function() {
@@ -59,9 +76,22 @@
 			$(".divclass").css("font-size", newFontSizeTitle)
 		}
 	</script>
-</head>
 
-<body background="Project_Homepage_files/login_bg.png">
+<script>
+		(function($){
+			 $(window).load(function(){
+				/* initialize scrollbar */
+			 $("#twitter-widget-holder").mCustomScrollbar({
+					 theme:"dark-3",
+					 scrollButtons:{enable:true}
+						 });
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+});
+})(jQuery);
+</script>
+</head>
+<div class="wrap">
+<body background="/static/login_bg.png">
 
 	<!--Header_section-->
 	<header id="header_outer" style="z-index: 1000; position: fixed; top: 0px; margin-left: 0px; width: 1291px; left: 0px;" class="scroll-to-fixed-fixed">
@@ -69,28 +99,14 @@
 			<div class="header_section">
 				<div class="logo"><a href="javascript:void(0)"><img src="/static/logob.png" alt=""></a></div>
 				<nav class="nav" id="nav">
-					<ul class="toggle">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62205.64641516927!2d79.13976791478741!3d12.981258750205454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sngo%20near%20me!5e0!3m2!1sen!2sin!4v1570569737089!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border-style:solid;" allowfullscreen="">
-							</iframe>
-							
-						<li><a href="#top_content">Home</a></li>
-						<li><a href="#service">Services</a></li>
-						<li><a href="#work_outer">Work</a></li>
-						<li><a href="#Portfolio">Portfolio</a></li>
-						<li><a href="#client_outer">Clients</a></li>
-						<li><a href="#team">Team</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="login.html">Login</a></li>
-					</ul>
+				
 					<ul class="">
-						<li><a href="#top_content">Home</a></li>
-						<li><a href="#service">Services</a></li>
-						<li><a href="#work_outer">Work</a></li>
-						<li><a href="#Portfolio">Portfolio</a></li>
-						<li><a href="#client_outer">Clients</a></li>
-						<li><a href="#team">Team</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="login.html">Login</a></li>
+						<li><a href="/ratings">Ratings</a></li>
+						<li><a href="/data">Questions</a></li>
+						<li><a href="#work_outer">Dashboard</a></li>
+						
+						
+						<li><a href="/home">Signout</a></li>
 					</ul>
 				</nav>
 				<a class="res-nav_click animated wobble wow animated" href="javascript:void(0)" style="visibility: visible; animation-name: wobble;"><i class="fa-bars"></i></a> </div>
@@ -98,277 +114,27 @@
 		</header>
 		<div style="display: block; width: 1291px; height: 92px; float: none;"></div>
     
-		<div class="par-twit">
+<div class="par-twit">
     <div class="tweets">
-    <a class="twitter-timeline" href="https://twitter.com/CRYINDIA?ref_src=twsrc%5Etfw">Tweets by CRYINDIA</a>
+		
+  <a class="twitter-timeline" href="https://twitter.com/CRYINDIA?ref_src=twsrc%5Etfw">Tweets by CRYINDIA</a>
         
 		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 		
 
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62205.64641516927!2d79.13976791478741!3d12.981258750205454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sngo%20near%20me!5e0!3m2!1sen!2sin!4v1570569737089!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border-style:solid;" allowfullscreen="">
-</iframe>
+<div id="iframe"> 
+	<h1><center>NGO's in Vellore</center></h1>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62205.64641516927!2d79.13976791478741!3d12.981258750205454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sngo%20near%20me!5e0!3m2!1sen!2sin!4v1570569737089!5m2!1sen!2sin" width="600" height="450" frameborder="1" style="border-style:solid;" id="map" allowfullscreen="">
+	</iframe>
 </div>
+</div>
+
+
+<footer>Hope you enjoyed</footer>    
     
-    
-    
-    <script type="text/javascript">
-		$(document).ready(function(e) {
-			$('#header_outer').scrollToFixed();
-			$('.res-nav_click').click(function() {
-				$('.main-nav').slideToggle();
-				return false
 
-			});
-
-		});
-	</script>
-	<!--<script>
-		wow = new WOW({
-			animateClass: 'animated',
-			offset: 100
-		});
-		wow.init();
-		document.getElementById('').onclick = function() {
-			var section = document.createElement('section');
-			section.className = 'wow fadeInDown';
-			section.className = 'wow shake';
-			section.className = 'wow zoomIn';
-			section.className = 'wow lightSpeedIn';
-			this.parentNode.insertBefore(section, this);
-		};
-	</script>-->
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('a').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 91
-				}, 1500, 'easeInOutExpo');
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
-				event.preventDefault();
-			});
-		})
-	</script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			// Portfolio Isotope
-			var container = $('#portfolio-wrap');
-
-
-			container.isotope({
-				animationEngine: 'best-available',
-				animationOptions: {
-					duration: 200,
-					queue: false
-				},
-				layoutMode: 'fitRows'
-			});
-
-			$('#filters a').click(function() {
-				$('#filters a').removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				container.isotope({
-					filter: selector
-				});
-				setProjects();
-				return false;
-			});
-
-
-			function splitColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = 1;
-
-
-				if (winWidth > 1024) {
-					columnNumb = 4;
-				} else if (winWidth > 900) {
-					columnNumb = 2;
-				} else if (winWidth > 479) {
-					columnNumb = 2;
-				} else if (winWidth < 479) {
-					columnNumb = 1;
-				}
-
-				return columnNumb;
-			}
-
-			function setColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = splitColumns(),
-					postWidth = Math.floor(winWidth / columnNumb);
-
-				container.find('.portfolio-item').each(function() {
-					$(this).css({
-						width: postWidth + 'px'
-					});
-				});
-			}
-
-			function setProjects() {
-				setColumns();
-				container.isotope('reLayout');
-			}
-
-			container.imagesLoaded(function() {
-				setColumns();
-			});
-
-
-			$(window).bind('resize', function() {
-				setProjects();
-			});
-
-		});
-		$(window).load(function() {
-			jQuery('#all').click();
-			return false;
-		});
-	</script>
-	<script src="Project_Homepage_files/contactform.js"></script>
-
-
-
-</body></html>
-    </div>
-	
-
-		<script type="text/javascript">
-		$(document).ready(function(e) {
-			$('#header_outer').scrollToFixed();
-			$('.res-nav_click').click(function() {
-				$('.main-nav').slideToggle();
-				return false
-
-			});
-
-		});
-	</script>
-	<!--<script>
-		wow = new WOW({
-			animateClass: 'animated',
-			offset: 100
-		});
-		wow.init();
-		document.getElementById('').onclick = function() {
-			var section = document.createElement('section');
-			section.className = 'wow fadeInDown';
-			section.className = 'wow shake';
-			section.className = 'wow zoomIn';
-			section.className = 'wow lightSpeedIn';
-			this.parentNode.insertBefore(section, this);
-		};
-	</script>-->
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('a').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 91
-				}, 1500, 'easeInOutExpo');
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
-				event.preventDefault();
-			});
-		})
-	</script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			// Portfolio Isotope
-			var container = $('#portfolio-wrap');
-
-
-			container.isotope({
-				animationEngine: 'best-available',
-				animationOptions: {
-					duration: 200,
-					queue: false
-				},
-				layoutMode: 'fitRows'
-			});
-
-			$('#filters a').click(function() {
-				$('#filters a').removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				container.isotope({
-					filter: selector
-				});
-				setProjects();
-				return false;
-			});
-
-
-			function splitColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = 1;
-
-
-				if (winWidth > 1024) {
-					columnNumb = 4;
-				} else if (winWidth > 900) {
-					columnNumb = 2;
-				} else if (winWidth > 479) {
-					columnNumb = 2;
-				} else if (winWidth < 479) {
-					columnNumb = 1;
-				}
-
-				return columnNumb;
-			}
-
-			function setColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = splitColumns(),
-					postWidth = Math.floor(winWidth / columnNumb);
-
-				container.find('.portfolio-item').each(function() {
-					$(this).css({
-						width: postWidth + 'px'
-					});
-				});
-			}
-
-			function setProjects() {
-				setColumns();
-				container.isotope('reLayout');
-			}
-
-			container.imagesLoaded(function() {
-				setColumns();
-			});
-
-
-			$(window).bind('resize', function() {
-				setProjects();
-			});
-
-		});
-		$(window).load(function() {
-			jQuery('#all').click();
-			return false;
-		});
-	</script>
-	<script src="Project_Homepage_files/contactform.js"></script>
-
-
-
-</body></html>
+</body>
+</div>
+</html>

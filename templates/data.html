@@ -128,6 +128,7 @@
 
 <script type="text/javascript">
 var count = 0;
+var data = {}
 function changeQues(){
     
     var ques_array = ["Describe the problem in detail","What do you think is a plausible solution to this problem?",
@@ -139,30 +140,30 @@ function changeQues(){
     document.getElementById("Q1").innerHTML = ques_array[count];
     count=count+1;
 
-	var answer = {
-		answer: ans
-	};
+	key = "ans".concat(count.toString())
 
-	$.ajax({
+	data[key] = ans;
+	
+
+    if(count>ques_array.length){
+       var canvas = document.getElementById("data_coll");
+       /*canvas.innerHTML = "Thank you for your feedback!";
+       canvas.style.fontSize = "40px";
+       canvas.style.fontFamily = "Dosis";
+       canvas.style.backgroundImage = "linear-gradient(to bottom,rgb(204, 129, 141),pink)"
+       canvas.style.margin = "auto";
+       canvas.style.marginTop = "100px";*/
+	   $.ajax({
 		type:"POST",
 		url: "/answers",
-		data: answer,
+		data: data,
 		success: function(){
-			console.log("HelloWorld");
+			console.log("Success")
 		},
 		error: function(){
 			console.log("Failure");
 		}
 	})
-
-    if(count>ques_array.length){
-       var canvas = document.getElementById("data_coll");
-       canvas.innerHTML = "Thank you for your feedback!";
-       canvas.style.fontSize = "40px";
-       canvas.style.fontFamily = "Dosis";
-       canvas.style.backgroundImage = "linear-gradient(to bottom,rgb(204, 129, 141),pink)"
-       canvas.style.margin = "auto";
-       canvas.style.marginTop = "100px";
     }
     
 

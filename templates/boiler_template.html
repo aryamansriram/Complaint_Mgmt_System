@@ -1,5 +1,37 @@
 <!DOCTYPE html>
 <html class="csstransforms csstransforms3d csstransitions"><head>
+    <style>
+    .row-disp{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin: auto;
+        border-style: solid;
+        width: max-content;
+        margin-top: 50px;
+        background-color: pink;
+    } 
+    #key{
+        width: 100px;
+    }  
+    .wrap{
+        text-align: center;
+        
+    }
+    #info{
+        border-style: solid;
+        margin-top: 50px;
+        padding: 30px;
+        width: max-content;
+        margin: auto;
+        font-weight: 600px;
+        font-size: 30px;
+        color: black;
+        background-image: linear-gradient(to bottom,rgb(204, 129, 141),pink);
+    } 
+    
+    
+    </style>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1">
@@ -14,16 +46,15 @@
 
 	<link href="/static/css_002.css" rel="stylesheet" type="text/css">
 	<link href="/static/css.css" rel="stylesheet" type="text/css">
-
 	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/jquery_002.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/bootstrap.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/jquery-scrolltofixed.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/jquery_003.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/jquery.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/wow.js"></script>
-	<script type="text/javascript" src="Project_Homepage_files/classie.js"></script>
+	<script type="text/javascript" src="/static/jquery_002.js"></script>
+	<script type="text/javascript" src="/static/bootstrap.js"></script>
+	<script type="text/javascript" src="/static/jquery-scrolltofixed.js"></script>
+	<script type="text/javascript" src="/static/jquery_003.js"></script>
+	<script type="text/javascript" src="/static/jquery.js"></script>
+	<script type="text/javascript" src="/static/wow.js"></script>
+	<script type="text/javascript" src="/static/classie.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(e) {
@@ -44,7 +75,15 @@
 
 
 		});
-
+        $(document).ready(function(){
+            $.getJSON("/ratings_validate",function(data){
+                
+                element = document.getElementById("info");
+                element.innerHTML = data.j;
+                            
+            })
+        })
+       
 		function resizeText() {
 			var preferredWidth = 767;
 			var displayWidth = window.innerWidth;
@@ -75,79 +114,45 @@
 						<li><a href="login.html">Login</a></li>
 					</ul>
 					<ul class="">
-						<li><a href="/home">Home</a></li>
+						<li><a href="/twit">Viz</a></li>
+						<li><a href="/data">Questions</a></li>
+						<li><a href="#work_outer">Dashboard</a></li>
 						
-						<li><a href="/">Login</a></li>
+						
+						<li><a href="/home">Signout</a></li>
 					</ul>
 				</nav>
 				<a class="res-nav_click animated wobble wow animated" href="javascript:void(0)" style="visibility: visible; animation-name: wobble;"><i class="fa-bars"></i></a> </div>
 		</div>
     </header><div style="display: block; width: 1291px; height: 92px; float: none;"></div>
     
+   <div class="wrap">
+    <div id="info" class="flipInY wow animated animated">
+
+    <p>Your ratings were:-</p> 
+       
+    {%for key,value in result.items()%}
+    
+       {%if key == "ratings"%}
+       
+       {%for key1,value1 in value.items()%}
+       <div class="row-disp">
+       <p id = "key" >{{key1}}:</p>
+       <p id="value">{{value1}}</p>
+    </div>
+       {%endfor%}
+       {%endif%}
    
-    <div id="data_coll-sig">
-        <h1 style="font-family: Dossis;"><center>Sign Up</center></h1>
-        <form id="dt-sig" action="/signup_validate" method="POST">
-            <div class="row-sig">
-            <label class="sig"> Name: </label>
-            <input type="text" name="Name" placeholder="Enter name"/> 
-            </div>
-            <div class="row-sig">
-                <label class="sig"> Email Id: </label>
-                <input type="email" name="mail" placeholder="Enter email"/> 
-            </div>
-            <div class="row-sig">
-            <label class="sig"> Age: </label>
-            <input type="text" name = "age" placeholder="Enter age"/> 
-            </div>
-
-            <div class="row-sig">
-                <label class="sig"> Address </label>
-                <textarea name="add"></textarea>    
-            </div>
-
-            <div class="row-sig">
-            <label class="sig"> Username </label>
-            <input type="text" name="uname" placeholder="Enter username"/> 
-            </div>
-            <div class="row-sig">
-                <label class="sig"> Password: </label>
-            <input type="password" name="pwd"/> 
-            </div>
-
-            
-            <div class="row-rat">
-                    <label class="sig"> Confirm Password: </label>
-                    <input type="password" name="cpwd" /> 
-					<p>{{data}}</p>
-            
-            </div>
-            <input type="submit" id="data_sub" value="SUBMIT"/> 
-            </div>
-                
-                
-                     
         
-           
-            
-                    
-
-
-
-               
-        </form>
+       
+    {%endfor%}
+       
     </div>
        
-
-
+</div>
 
 
     
-}
-
-
-</script>
-
 
 
 </body></html>
