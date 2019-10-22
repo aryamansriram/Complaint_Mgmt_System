@@ -85,7 +85,7 @@
 						<li><a href="#work_outer">Dashboard</a></li>
 						
 						
-						<li><a href="/home">Signout</a></li>
+						<li><a href="/signout">Signout</a></li>
 					</ul>
 				</nav>
 				<a class="res-nav_click animated wobble wow animated" href="javascript:void(0)" style="visibility: visible; animation-name: wobble;"><i class="fa-bars"></i></a> </div>
@@ -141,30 +141,36 @@ function changeQues(){
     count=count+1;
 
 	key = "ans".concat(count.toString())
+	
 
 	data[key] = ans;
 	
 
     if(count>ques_array.length){
        var canvas = document.getElementById("data_coll");
-       /*canvas.innerHTML = "Thank you for your feedback!";
+       canvas.innerHTML = "Thank you for your feedback!";
        canvas.style.fontSize = "40px";
        canvas.style.fontFamily = "Dosis";
        canvas.style.backgroundImage = "linear-gradient(to bottom,rgb(204, 129, 141),pink)"
        canvas.style.margin = "auto";
-       canvas.style.marginTop = "100px";*/
+	   canvas.style.marginTop = "100px";
+	   data_send = JSON.stringify(data)
 	   $.ajax({
 		type:"POST",
 		url: "/answers",
-		data: data,
-		success: function(){
-			console.log("Success")
+		data: data_send,
+		contentType: "application/json;charset=UTF-8",
+		success: function(response){
+			
+			console.log(response)
 		},
 		error: function(){
 			console.log("Failure");
 		}
 	})
+	
     }
+	
     
 
     
@@ -191,262 +197,5 @@ function changeQues(){
 });
 </script>
     
-    <script type="text/javascript">
-		$(document).ready(function(e) {
-			$('#header_outer').scrollToFixed();
-			$('.res-nav_click').click(function() {
-				$('.main-nav').slideToggle();
-				return false
-
-			});
-
-		});
-	</script>
-	<!--<script>
-		wow = new WOW({
-			animateClass: 'animated',
-			offset: 100
-		});
-		wow.init();
-		document.getElementById('').onclick = function() {
-			var section = document.createElement('section');
-			section.className = 'wow fadeInDown';
-			section.className = 'wow shake';
-			section.className = 'wow zoomIn';
-			section.className = 'wow lightSpeedIn';
-			this.parentNode.insertBefore(section, this);
-		};
-	</script>-->
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('a').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 91
-				}, 1500, 'easeInOutExpo');
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
-				event.preventDefault();
-			});
-		})
-	</script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			// Portfolio Isotope
-			var container = $('#portfolio-wrap');
-
-
-			container.isotope({
-				animationEngine: 'best-available',
-				animationOptions: {
-					duration: 200,
-					queue: false
-				},
-				layoutMode: 'fitRows'
-			});
-
-			$('#filters a').click(function() {
-				$('#filters a').removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				container.isotope({
-					filter: selector
-				});
-				setProjects();
-				return false;
-			});
-
-
-			function splitColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = 1;
-
-
-				if (winWidth > 1024) {
-					columnNumb = 4;
-				} else if (winWidth > 900) {
-					columnNumb = 2;
-				} else if (winWidth > 479) {
-					columnNumb = 2;
-				} else if (winWidth < 479) {
-					columnNumb = 1;
-				}
-
-				return columnNumb;
-			}
-
-			function setColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = splitColumns(),
-					postWidth = Math.floor(winWidth / columnNumb);
-
-				container.find('.portfolio-item').each(function() {
-					$(this).css({
-						width: postWidth + 'px'
-					});
-				});
-			}
-
-			function setProjects() {
-				setColumns();
-				container.isotope('reLayout');
-			}
-
-			container.imagesLoaded(function() {
-				setColumns();
-			});
-
-
-			$(window).bind('resize', function() {
-				setProjects();
-			});
-
-		});
-		$(window).load(function() {
-			jQuery('#all').click();
-			return false;
-		});
-	</script>
-	<script src="Project_Homepage_files/contactform.js"></script>
-
-
-
-</body></html>
-    </div>
-	
-
-		<script type="text/javascript">
-		$(document).ready(function(e) {
-			$('#header_outer').scrollToFixed();
-			$('.res-nav_click').click(function() {
-				$('.main-nav').slideToggle();
-				return false
-
-			});
-
-		});
-	</script>
-	<!--<script>
-		wow = new WOW({
-			animateClass: 'animated',
-			offset: 100
-		});
-		wow.init();
-		document.getElementById('').onclick = function() {
-			var section = document.createElement('section');
-			section.className = 'wow fadeInDown';
-			section.className = 'wow shake';
-			section.className = 'wow zoomIn';
-			section.className = 'wow lightSpeedIn';
-			this.parentNode.insertBefore(section, this);
-		};
-	</script>-->
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('a').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 91
-				}, 1500, 'easeInOutExpo');
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
-				event.preventDefault();
-			});
-		})
-	</script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			// Portfolio Isotope
-			var container = $('#portfolio-wrap');
-
-
-			container.isotope({
-				animationEngine: 'best-available',
-				animationOptions: {
-					duration: 200,
-					queue: false
-				},
-				layoutMode: 'fitRows'
-			});
-
-			$('#filters a').click(function() {
-				$('#filters a').removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				container.isotope({
-					filter: selector
-				});
-				setProjects();
-				return false;
-			});
-
-
-			function splitColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = 1;
-
-
-				if (winWidth > 1024) {
-					columnNumb = 4;
-				} else if (winWidth > 900) {
-					columnNumb = 2;
-				} else if (winWidth > 479) {
-					columnNumb = 2;
-				} else if (winWidth < 479) {
-					columnNumb = 1;
-				}
-
-				return columnNumb;
-			}
-
-			function setColumns() {
-				var winWidth = $(window).width(),
-					columnNumb = splitColumns(),
-					postWidth = Math.floor(winWidth / columnNumb);
-
-				container.find('.portfolio-item').each(function() {
-					$(this).css({
-						width: postWidth + 'px'
-					});
-				});
-			}
-
-			function setProjects() {
-				setColumns();
-				container.isotope('reLayout');
-			}
-
-			container.imagesLoaded(function() {
-				setColumns();
-			});
-
-
-			$(window).bind('resize', function() {
-				setProjects();
-			});
-
-		});
-		$(window).load(function() {
-			jQuery('#all').click();
-			return false;
-		});
-	</script>
-	<script src="Project_Homepage_files/contactform.js"></script>
-
-
-
+   
 </body></html>
